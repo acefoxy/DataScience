@@ -1,0 +1,208 @@
+| .names file created by George John, October 1994
+|
+|1.TITLE
+|	SATELLITE IMAGE DATASET (STATLOG VERSION)
+|
+|	PURPOSE
+|	The StatLog database consists of the multi-spectral values
+|	of pixels in 3x3 neighbourhoods in a satellite image,
+|	and the classification associated with the central pixel
+|	in each neighbourhood. The aim is to predict this
+|	classification, given the multi-spectral values. In
+|	the sample database, the class of a pixel is coded as
+|	a number.
+|
+|
+|2.USE in STATLOG
+|	2.1 Testing Mode
+|		TRAIN/TEST.
+|	2.2 Special PreProcessing
+|		None
+|	2.3 Test Results
+|				Success Rate	TIME
+|		Algorithm	Train	Test	Train	Test
+|		--------------------------------------------
+|		KNN		91.1	90.600	2105	944
+|		LVQ		?	89.500
+|		Dipol92		?	88.900
+|		Radial		88.9	87.900	723	74
+|		Alloc80		96.4	86.800	63840	28757
+|		IndCart		98.9	86.200	2109	9
+|		Cart		92.1	86.200	348	14
+|		BackProp	88.8	86.100	54371	39
+|		BayTree		?	85.30
+|		NewId		93.3	85.000	296	53
+|		Cn2		98.6	85.000	1718	16
+|		C4.5		95.7	85.000	449	11
+|		Cal5		87.8	84.900	1345	13
+|		QuaDisc		89.4	84.500	276	93
+|		Ac2		?	84.300	8244	17403
+|		Smart		87.7	84.100	83068	20
+|		LogDisc		88.1	83.700	4414	41
+|		Cascade		?	83.700
+|		Discrim		85.1	82.900	68	12
+|		Kohonen		89.9	82.100	12627	129
+|		Castle		?	80.600
+|		Bayes		71.3	71.300	56	12
+|		Default		24.00	24.000
+|		Itrule		?	0.000	253	253
+|
+|3. SOURCES and PASTE USAGE
+|
+|	The original database was generated from Landsat Multi-Spectral
+|	Scanner image data. These and other forms of remotely
+|	sensed imagery can be purchased at a price from relevant
+|	governmental authorities. The data is usually in binary
+|	form, and distributed on magnetic tape(s).
+|
+|	SOURCE
+|		The small sample database was provided by:
+|		Ashwin Srinivasan
+|		Department of Statistics and Modelling Science
+|		University of Strathclyde
+|		Glasgow
+|		Scotland
+|		UK
+|
+|	ORIGIN
+|	The original Landsat data for this database was generated
+|	from data purchased from NASA by the Australian Centre
+|	for Remote Sensing, and used for research at:
+|		The Centre for Remote Sensing
+|		University of New South Wales
+|		Kensington, PO Box 1
+|		NSW 2033
+|		Australia.
+|
+|     	The sample database was generated taking a small section (82
+|     	rows and 100 columns) from the original data. The binary values
+|     	were converted to their present ASCII form by Ashwin Srinivasan.
+|	    The classification for each pixel was performed on the basis of
+|     	an actual site visit by Ms. Karen Hall, when working for Professor
+|     	John A. Richards, at the Centre for Remote Sensing at the University
+|     	of New South Wales, Australia. Conversion to 3x3 neighbourhoods and
+|     	splitting into test and training sets was done by Alistair Sutherland
+|     	at Strathclyde University.
+|
+|	HISTORY
+|	The Landsat satellite data is one of the many sources of information
+|	available for a scene. The interpretation of a scene by integrating
+|	spatial data of diverse types and resolutions including multispectral
+|	and radar data, maps indicating topography, land use etc. is expected
+|	to assume significant importance with the onset of an era characterised
+|	by integrative approaches to remote sensing (for example, NASA's Earth
+|	Observing System commencing this decade). Existing statistical methods 
+|	are ill-equipped for handling such diverse data types. Note that this
+|	is not true for Landsat MSS data considered in isolation (as in
+|	this sample database). This data satisfies the important requirements
+|	of being numerical and at a single resolution, and standard maximum-
+|	likelihood classification performs very well. Consequently,
+|	for this data, it should be interesting to compare the performance
+|	of other methods against the statistical approach.
+|
+|4. DATASET DESCRIPTION
+|	One frame of Landsat MSS imagery consists of four digital images
+|	of the same scene in different spectral bands. Two of these are
+|	in the visible region (corresponding approximately to green and
+|	red regions of the visible spectrum) and two are in the (near)
+|	infra-red. Each pixel is a 8-bit binary word, with 0 corresponding
+|	to black and 255 to white. The spatial resolution of a pixel is about
+|	80m x 80m. Each image contains 2340 x 3380 such pixels.
+|
+|	The database is a (tiny) sub-area of a scene, consisting of 82 x 100
+|	pixels. Each line of data corresponds to a 3x3 square neighbourhood
+|	of pixels completely contained within the 82x100 sub-area. Each line
+|	contains the pixel values in the four spectral bands 
+|	(converted to ASCII) of each of the 9 pixels in the 3x3 neighbourhood
+|	and a number indicating the classification label of the central pixel. 
+|	The number is a code for the following classes:
+|
+|	NUMBER OF EXAMPLES
+|		training set     4435
+|		test set         2000
+|
+|	NUMBER OF ATTRIBUTES
+|		36 (= 4 spectral bands x 9 pixels in neighbourhood )
+|
+|		ATTRIBUTES
+|		The attributes are numerical, in the range 0 to 255.
+|	NUMBER of CLASS
+|
+|		There are 6 decision classes: 1,2,3,4,5 and 7.
+|
+|		NB. There are no examples with class 6 in this dataset-
+|		they have all been removed because of doubts about the 
+|		validity of this class.
+|
+|		N  Description			Train		Test
+|		------------------------------------------------------------
+|		1 red soil			1072(24.17%)	461 (23.05%)
+|		2 cotton crop			479 (10.80%)	224 (11.20%)
+|		3 grey soil			961 (21.67%)	397 (19.85%)
+|		4 damp grey soil		415 (09.36%)	211 (10.55%)
+|		5 soil with vegetation stubble	470 (10.60%)	237 (11.85%)
+|		6 mixture class (all types present)
+|		7 very damp grey soil		1038(23.40%)	470 (23.50%)
+|	
+|		NB. There are no examples with class 6 in this dataset.
+|	
+|		The data is given in random order and certain lines of data
+|		have been removed so you cannot reconstruct the original image
+|		from this dataset.
+|	
+|		In each line of data the four spectral values for the top-left
+|		pixel are given first followed by the four spectral values for
+|		the top-middle pixel and then those for the top-right pixel,
+|		and so on with the pixels read out in sequence left-to-right and
+|		top-to-bottom. Thus, the four spectral values for the central
+|		pixel are given by attributes 17,18,19 and 20. If you like you
+|		can use only these four attributes, while ignoring the others.
+|		This avoids the problem which arises when a 3x3 neighbourhood
+|		straddles a boundary.
+|
+|
+|
+|CONTACTS
+|	statlog-adm@ncc.up.pt
+|	bob@stams.strathclyde.ac.uk
+|	
+|
+|================================================================================
+|
+1,2,3,4,5,7.
+A1: continuous.
+A2: continuous.
+A3: continuous.
+A4: continuous.
+A5: continuous.
+A6: continuous.
+A7: continuous.
+A8: continuous.
+A9: continuous.
+A10: continuous.
+A11: continuous.
+A12: continuous.
+A13: continuous.
+A14: continuous.
+A15: continuous.
+A16: continuous.
+A17: continuous.
+A18: continuous.
+A19: continuous.
+A20: continuous.
+A21: continuous.
+A22: continuous.
+A23: continuous.
+A24: continuous.
+A25: continuous.
+A26: continuous.
+A27: continuous.
+A28: continuous.
+A29: continuous.
+A30: continuous.
+A31: continuous.
+A32: continuous.
+A33: continuous.
+A34: continuous.
+A35: continuous.
+A36: continuous.

@@ -1,0 +1,15 @@
+irrelevant,irrelevant,irrelevant,irrelevant,irrelevant,no,auto
+xstab,irrelevant,irrelevant,irrelevant,irrelevant,yes,noauto
+stab,LX,irrelevant,irrelevant,irrelevant,yes,noauto
+stab,XL,irrelevant,irrelevant,irrelevant,yes,noauto
+stab,MM,nn,tail,irrelevant,yes,noauto
+irrelevant,irrelevant,irrelevant,irrelevant,OutOfRange,yes,noauto
+stab,SS,irrelevant,irrelevant,Low,yes,auto
+stab,SS,irrelevant,irrelevant,Medium,yes,auto
+stab,SS,irrelevant,irrelevant,Strong,yes,auto
+stab,MM,pp,head,Low,yes,auto
+stab,MM,pp,head,Medium,yes,auto
+stab,MM,pp,tail,Low,yes,auto
+stab,MM,pp,tail,Medium,yes,auto
+stab,MM,pp,head,Strong,yes,noauto
+stab,MM,pp,tail,Strong,yes,auto

@@ -1,0 +1,17 @@
+| Got this from Ross Quinlan on 10/13/96.
+| Seem like a dup (very close but not exact) of cleve
+0, 1
+
+age:	continuous
+sex:	0, 1
+cp:	1, 2, 3, 4
+trestbps: continuous
+chol:	continuous
+fbs:	0, 1
+restecg: 0, 1, 2
+thalach: continuous
+exang:	0, 1
+oldpeak: continuous
+slope: continuous
+ca:	continuous
+thal:	continuous

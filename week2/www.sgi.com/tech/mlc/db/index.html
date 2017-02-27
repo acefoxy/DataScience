@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<HEAD>
+
+<TITLE>SGI - MLC++: Datasets from UCI</TITLE>
+
+<META NAME="description" content="Datasets from UCI for MLC++">
+<META NAME="keywords" content="MLC++,algorithm development, mineset, mine set, data mining, c++, machine learning">
+<meta name="owner" content="Silicon Graphics International Corp." />
+
+ <meta http-equiv="imagetoolbar" content="no" />
+ <!--script type="text/javascript" src="/js/redesign_style_sniffer.js"></script-->
+ <link rel="stylesheet" href="/styles/new/master.css" type="text/css" />
+ <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+ <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<!-- Begin G ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-1614576-2', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+<!-- End G ANALYTICS -->
+
+<script type="text/javascript">
+var _elqQ = _elqQ || [];
+_elqQ.push(['elqSetSiteId', '912409556']);
+_elqQ.push(['elqTrackPageViewDisplayOptInBannerByCountry']);
+(function () {
+function async_load() {
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.async = true; s.src = '//img.en25.com/i/elqCfg.min.js';
+var x = document.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+}
+if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+else if (window.attachEvent) window.attachEvent('onload', async_load);
+})();
+function elqVisitorTrackingOptIn() { _elqQ.push(['elqOptIn']); } function elqVisitorTrackingOptOut() { _elqQ.push(['elqOptOut']); }
+</script>
+
+</head>
+<body>
+
+<div id="topPageCorner">
+	<div id="container"> 
+	<!-- Start Header -->
+		<div id="globalContainer">
+			<div id="globalHeader2">
+				<!-- Start Logo -->
+				<div class="logodiv2">
+				<a href="/"><img src="/images/main_template/topbar_logo.png" alt="SGI" style="border:0px" /></a>
+				</div>
+				<!-- End Logo -->
+				<!-- Start Tagline -->
+				<div class="taglinediv2">
+				<h1>The Trusted Leader in High Performance Computing</h1>
+				</div>
+				<!-- End Tagline -->
+				<!-- Start Search -->
+				<div class="searchdiv2">
+						<form action="/search/results.html" id="cse-search-box">
+							<input type="text" name="q" size="31" class="box" value=" Search" style="color:#ffffff" onfocus="this.value='';this.style.color='#ffffff';this.onfocus='';" />
+							<button type="submit" name="btnG" class="search"></button>
+						    <input type="hidden" name="cx" value="012778446633271376432:xd_z7pteusu" />
+						    <input type="hidden" name="cof" value="FORID:11;NB:1" />
+						    <input type="hidden" name="ie" value="UTF-8" />
+						    <input type="submit" name="sa" value="Search" class="hideButton" />
+						</form>
+				</div>
+				<!-- End Search -->
+			</div>
+		</div>
+		<!-- End Header -->
+		<!-- Start Topnav -->
+		<div id="nav2">
+			<div id="nav-category2"><a href="/products/">Products</a></div>
+			<div id="nav-category2"><a href="/solutions/">Solutions</a></div>
+			<div id="nav-category2"><a href="/services/">Services</a></div>
+			<div id="nav-category2"><a href="/partners/">Partners</a></div>
+			<div id="nav-category2"><a href="/company_info/">About SGI</a></div>
+			<div id="nav-subnav2"><a href="/sales/askarep.html">Questions?&nbsp;&nbsp;Contact Sales &raquo;</a></div>
+		</div>
+		<!-- End Topnav -->
+	<!-- End Header -->
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" align="left" id="core">
+	<tr>
+		<td colspan="2">
+
+
+<!-- Start Breadcrumbs -->
+<div class="vspace" style="height: 7px;">&nbsp;</div>
+<!-- End Breadcrumbs -->
+
+
+
+<!--- Do not remove the next four lines before the sidenav --->
+</TD>
+</TR>
+<TR VALIGN="TOP">
+        <td id="leftSideColumn">
+
+<!-- Begin Side Nav -->
+    <div id="sidenav2">
+     <div class="first"><a href="/tech/mlc/index.html" id="homeLink">MLC++</a></div>
+     <div class="second"><a href="/tech/mlc/legal.html" id="legal">Legal Issues</a></div>
+     <div class="second"><a href="/tech/mlc/docs.html" id="docs">Documentation</a></div>
+     <div class="second"><a href="/tech/mlc/utils.html" id="utils">Utilities</a></div>
+     <div class="second"><a href="/tech/mlc/trees.html" id="trees">Tree Visualizer</a></div>
+     <div class="second"><a href="/tech/mlc/hist.html" id="hist">History</a></div>
+     <div class="second"><a href="/tech/mlc/source.html" id="source">Source Code</a></div>
+     <div class="second"><a href="/tech/mlc/enviro.html" id="enviro">Environment/ Standards</a></div>
+	</div>
+
+
+<!-- End Side Nav -->
+
+<!-- Start i_sep_left.html-->
+</td>
+<td valign="TOP">
+
+
+<!-- End i_sep_left.html-->
+
+<div id="contentAreaContainer">
+<div id="contentArea">
+
+
+<!-- Content starts here -->
+<h1>Datasets from UCI</h1>
+
+<p>
+<a href="adult.all">adult.all</a><br />
+<a href="adult.awk">adult.awk</a><br />
+<a href="adult.data">adult.data</a><br />
+<a href="adult.doc">adult.doc</a><br />
+<a href="adult.names">adult.names</a><br />
+<a href="adult.test">adult.test</a><br />
+<a href="allhypo.all">allhypo.all</a><br />
+<a href="allhypo.data">allhypo.data</a><br />
+<a href="allhypo.names">allhypo.names</a><br />
+<a href="allhypo.test">allhypo.test</a><br />
+<a href="anneal.all">anneal.all</a><br />
+<a href="anneal.data">anneal.data</a><br />
+<a href="anneal.names">anneal.names</a><br />
+<a href="anneal.test">anneal.test</a><br />
+<a href="anneal-U.all">anneal-U.all</a><br />
+<a href="anneal-U.data">anneal-U.data</a><br />
+<a href="anneal-U.names">anneal-U.names</a><br />
+<a href="anneal-U.test">anneal-U.test</a><br />
+<a href="audiology.all">audiology.all</a><br />
+<a href="audiology.data">audiology.data</a><br />
+<a href="audiology.names">audiology.names</a><br />
+<a href="audiology.test">audiology.test</a><br />
+<a href="australian.all">australian.all</a><br />
+<a href="australian.data">australian.data</a><br />
+<a href="australian.names">australian.names</a><br />
+<a href="australian.test">australian.test</a><br />
+<a href="auto.all">auto.all</a><br />
+<a href="auto.data">auto.data</a><br />
+<a href="auto.names">auto.names</a><br />
+<a href="auto.test">auto.test</a><br />
+<a href="balance-scale.all">balance-scale.all</a><br />
+<a href="balance-scale.data">balance-scale.data</a><br />
+<a href="balance-scale.names">balance-scale.names</a><br />
+<a href="balance-scale.test">balance-scale.test</a><br />
+<a href="banding.all">banding.all</a><br />
+<a href="banding.data">banding.data</a><br />
+<a href="banding.names">banding.names</a><br />
+<a href="banding.test">banding.test</a><br />
+<a href="breast.all">breast.all</a><br />
+<a href="breast-cancer.all">breast-cancer.all</a><br />
+<a href="breast-cancer.data">breast-cancer.data</a><br />
+<a href="breast-cancer.names">breast-cancer.names</a><br />
+<a href="breast-cancer.test">breast-cancer.test</a><br />
+<a href="breast.data">breast.data</a><br />
+<a href="breastLoss.all">breastLoss.all</a><br />
+<a href="breastLoss.data">breastLoss.data</a><br />
+<a href="breastLoss.names">breastLoss.names</a><br />
+<a href="breast.names">breast.names</a><br />
+<a href="breast.test">breast.test</a><br />
+<a href="buggyCrx.data">buggyCrx.data</a><br />
+<a href="buggyCrx.names">buggyCrx.names</a><br />
+<a href="buggyCrx.test">buggyCrx.test</a><br />
+<a href="calendarDOW.data">calendarDOW.data</a><br />
+<a href="calendarDOW.names">calendarDOW.names</a><br />
+<a href="calendarDOW.test">calendarDOW.test</a><br />
+<a href="calendarRST.data">calendarRST.data</a><br />
+<a href="calendarRST.names">calendarRST.names</a><br />
+<a href="calendarRST.test">calendarRST.test</a><br />
+<a href="cars1.all">cars1.all</a><br />
+<a href="cars1.data">cars1.data</a><br />
+<a href="cars1.names">cars1.names</a><br />
+<a href="cars1.test">cars1.test</a><br />
+<a href="cars.all">cars.all</a><br />
+<a href="cars.data">cars.data</a><br />
+<a href="cars.names">cars.names</a><br />
+<a href="cars.test">cars.test</a><br />
+<a href="chess.all">chess.all</a><br />
+<a href="chess.data">chess.data</a><br />
+<a href="chess.names">chess.names</a><br />
+<a href="chess.test">chess.test</a><br />
+<a href="churn.all">churn.all</a><br />
+<a href="churn.data">churn.data</a><br />
+<a href="churn.names">churn.names</a><br />
+<a href="churn.test">churn.test</a><br />
+<a href="cleve.all">cleve.all</a><br />
+<a href="cleve.data">cleve.data</a><br />
+<a href="cleveland.data">cleveland.data</a><br />
+<a href="cleveland.names">cleveland.names</a><br />
+<a href="cleveland-nominal.data">cleveland-nominal.data</a><br />
+<a href="cleveland-nominal.names">cleveland-nominal.names</a><br />
+<a href="cleve.names">cleve.names</a><br />
+<a href="cleve.test">cleve.test</a><br />
+<a href="corral.all">corral.all</a><br />
+<a href="corral.data">corral.data</a><br />
+<a href="corral.names">corral.names</a><br />
+<a href="corral.test">corral.test</a><br />
+<a href="crx.all">crx.all</a><br />
+<a href="crx.data">crx.data</a><br />
+<a href="crx.names">crx.names</a><br />
+<a href="crx.test">crx.test</a><br />
+<a href="diabetes.all">diabetes.all</a><br />
+<a href="diabetes.data">diabetes.data</a><br />
+<a href="diabetes.names">diabetes.names</a><br />
+<a href="diabetes.test">diabetes.test</a><br />
+<a href="DNA.all">DNA.all</a><br />
+<a href="DNA.data">DNA.data</a><br />
+<a href="DNA.names">DNA.names</a><br />
+<a href="DNA-nominal.all">DNA-nominal.all</a><br />
+<a href="DNA-nominal.data">DNA-nominal.data</a><br />
+<a href="DNA-nominal.names">DNA-nominal.names</a><br />
+<a href="DNA-nominal.test">DNA-nominal.test</a><br />
+<a href="DNAPromoter.data">DNAPromoter.data</a><br />
+<a href="DNAPromoter.names">DNAPromoter.names</a><br />
+<a href="DNA.test">DNA.test</a><br />
+<a href="echocardiogram.all">echocardiogram.all</a><br />
+<a href="echocardiogram.data">echocardiogram.data</a><br />
+<a href="echocardiogram.names">echocardiogram.names</a><br />
+<a href="echocardiogram.test">echocardiogram.test</a><br />
+<a href="flare.all">flare.all</a><br />
+<a href="flare.data">flare.data</a><br />
+<a href="flare.names">flare.names</a><br />
+<a href="flare.test">flare.test</a><br />
+<a href="german.all">german.all</a><br />
+<a href="german.data">german.data</a><br />
+<a href="german.names">german.names</a><br />
+<a href="german-org.all">german-org.all</a><br />
+<a href="german-org.data">german-org.data</a><br />
+<a href="german-org.names">german-org.names</a><br />
+<a href="german-org.test">german-org.test</a><br />
+<a href="german.test">german.test</a><br />
+<a href="glass2.all">glass2.all</a><br />
+<a href="glass2.data">glass2.data</a><br />
+<a href="glass2.names">glass2.names</a><br />
+<a href="glass2.test">glass2.test</a><br />
+<a href="glass.all">glass.all</a><br />
+<a href="glass.data">glass.data</a><br />
+<a href="glass.names">glass.names</a><br />
+<a href="glass.test">glass.test</a><br />
+<a href="golf.data">golf.data</a><br />
+<a href="golf.names">golf.names</a><br />
+<a href="hayes-roth.all">hayes-roth.all</a><br />
+<a href="hayes-roth.data">hayes-roth.data</a><br />
+<a href="hayes-roth.names">hayes-roth.names</a><br />
+<a href="hayes-roth.test">hayes-roth.test</a><br />
+<a href="heart.all">heart.all</a><br />
+<a href="heart.data">heart.data</a><br />
+<a href="heart.names">heart.names</a><br />
+<a href="heart.test">heart.test</a><br />
+<a href="hepatitis.all">hepatitis.all</a><br />
+<a href="hepatitis.data">hepatitis.data</a><br />
+<a href="hepatitis.names">hepatitis.names</a><br />
+<a href="hepatitis.test">hepatitis.test</a><br />
+<a href="horse-colic.all">horse-colic.all</a><br />
+<a href="horse-colic.data">horse-colic.data</a><br />
+<a href="horse-colic.names">horse-colic.names</a><br />
+<a href="horse-colic.test">horse-colic.test</a><br />
+<a href="hungarian.all">hungarian.all</a><br />
+<a href="hungarian.data">hungarian.data</a><br />
+<a href="hungarian.names">hungarian.names</a><br />
+<a href="hungarian.test">hungarian.test</a><br />
+<a href="hypothyroid.all">hypothyroid.all</a><br />
+<a href="hypothyroid.data">hypothyroid.data</a><br />
+<a href="hypothyroidLoss.all">hypothyroidLoss.all</a><br />
+<a href="hypothyroidLoss.data">hypothyroidLoss.data</a><br />
+<a href="hypothyroidLoss.names">hypothyroidLoss.names</a><br />
+<a href="hypothyroid.names">hypothyroid.names</a><br />
+<a href="hypothyroid.test">hypothyroid.test</a><br />
+<a href="index.html">index.html</a><br />
+<a href="Inducer.treeviz.data">Inducer.treeviz.data</a><br />
+<a href="ionosphere.all">ionosphere.all</a><br />
+<a href="ionosphere.data">ionosphere.data</a><br />
+<a href="ionosphere.names">ionosphere.names</a><br />
+<a href="ionosphere.test">ionosphere.test</a><br />
+<a href="iris2Weighted.all">iris2Weighted.all</a><br />
+<a href="iris2Weighted.data">iris2Weighted.data</a><br />
+<a href="iris2Weighted.names">iris2Weighted.names</a><br />
+<a href="iris2Weighted.test">iris2Weighted.test</a><br />
+<a href="iris3.all">iris3.all</a><br />
+<a href="iris3.names">iris3.names</a><br />
+<a href="iris.all">iris.all</a><br />
+<a href="iris.data">iris.data</a><br />
+<a href="iris-disc.data">iris-disc.data</a><br />
+<a href="iris-disc.names">iris-disc.names</a><br />
+<a href="iris-disc.test">iris-disc.test</a><br />
+<a href="irisLoss.all">irisLoss.all</a><br />
+<a href="irisLoss.data">irisLoss.data</a><br />
+<a href="irisLoss.names">irisLoss.names</a><br />
+<a href="irisLoss.test">irisLoss.test</a><br />
+<a href="iris.names">iris.names</a><br />
+<a href="iris.test">iris.test</a><br />
+<a href="irisWeighted.all">irisWeighted.all</a><br />
+<a href="irisWeighted.names">irisWeighted.names</a><br />
+<a href="labor-neg.all">labor-neg.all</a><br />
+<a href="labor-neg.data">labor-neg.data</a><br />
+<a href="labor-neg.names">labor-neg.names</a><br />
+<a href="labor-neg.test">labor-neg.test</a><br />
+<a href="led24.all">led24.all</a><br />
+<a href="led24.data">led24.data</a><br />
+<a href="led24.names">led24.names</a><br />
+<a href="led24.test">led24.test</a><br />
+<a href="led7.all">led7.all</a><br />
+<a href="led7.data">led7.data</a><br />
+<a href="led7.names">led7.names</a><br />
+<a href="led7.test">led7.test</a><br />
+<a href="lenses.all">lenses.all</a><br />
+<a href="lenses.data">lenses.data</a><br />
+<a href="lenses-full.data">lenses-full.data</a><br />
+<a href="lenses-full.names">lenses-full.names</a><br />
+<a href="lenses-full.test">lenses-full.test</a><br />
+<a href="lenses.names">lenses.names</a><br />
+<a href="lenses.test">lenses.test</a><br />
+<a href="letter.all">letter.all</a><br />
+<a href="letter.data">letter.data</a><br />
+<a href="letter.doc">letter.doc</a><br />
+<a href="letter.names">letter.names</a><br />
+<a href="letter.test">letter.test</a><br />
+<a href="liver-disorder.all">liver-disorder.all</a><br />
+<a href="liver-disorder.data">liver-disorder.data</a><br />
+<a href="liver-disorder.names">liver-disorder.names</a><br />
+<a href="liver-disorder.test">liver-disorder.test</a><br />
+<a href="lung-cancer.all">lung-cancer.all</a><br />
+<a href="lung-cancer.data">lung-cancer.data</a><br />
+<a href="lung-cancer.names">lung-cancer.names</a><br />
+<a href="lung-cancer.test">lung-cancer.test</a><br />
+<a href="lymphography.all">lymphography.all</a><br />
+<a href="lymphography.data">lymphography.data</a><br />
+<a href="lymphography.names">lymphography.names</a><br />
+<a href="lymphography.test">lymphography.test</a><br />
+<a href="meta.data">meta.data</a><br />
+<a href="meta.names">meta.names</a><br />
+<a href="mofn-3-7-10.data">mofn-3-7-10.data</a><br />
+<a href="mofn-3-7-10.names">mofn-3-7-10.names</a><br />
+<a href="mofn-3-7-10.test">mofn-3-7-10.test</a><br />
+<a href="monk1.all">monk1.all</a><br />
+<a href="monk1-bin.data">monk1-bin.data</a><br />
+<a href="monk1-bin.names">monk1-bin.names</a><br />
+<a href="monk1-bin.test">monk1-bin.test</a><br />
+<a href="monk1-corrupt.data">monk1-corrupt.data</a><br />
+<a href="monk1-corrupt.names">monk1-corrupt.names</a><br />
+<a href="monk1-corrupt.test">monk1-corrupt.test</a><br />
+<a href="monk1-cross.all">monk1-cross.all</a><br />
+<a href="monk1-cross.data">monk1-cross.data</a><br />
+<a href="monk1-cross.names">monk1-cross.names</a><br />
+<a href="monk1-cross.test">monk1-cross.test</a><br />
+<a href="monk1.data">monk1.data</a><br />
+<a href="monk1-full.all">monk1-full.all</a><br />
+<a href="monk1-full.data">monk1-full.data</a><br />
+<a href="monk1-full.names">monk1-full.names</a><br />
+<a href="monk1-full.test">monk1-full.test</a><br />
+<a href="monk1-local.data">monk1-local.data</a><br />
+<a href="monk1-local.names">monk1-local.names</a><br />
+<a href="monk1-local.test">monk1-local.test</a><br />
+<a href="monk1.names">monk1.names</a><br />
+<a href="monk1-org.all">monk1-org.all</a><br />
+<a href="monk1-org.data">monk1-org.data</a><br />
+<a href="monk1-org.names">monk1-org.names</a><br />
+<a href="monk1-org.test">monk1-org.test</a><br />
+<a href="monk1.test">monk1.test</a><br />
+<a href="monk2.all">monk2.all</a><br />
+<a href="monk2-bin.data">monk2-bin.data</a><br />
+<a href="monk2-bin.names">monk2-bin.names</a><br />
+<a href="monk2-bin.test">monk2-bin.test</a><br />
+<a href="monk2.data">monk2.data</a><br />
+<a href="monk2-local.all">monk2-local.all</a><br />
+<a href="monk2-local.data">monk2-local.data</a><br />
+<a href="monk2-local.names">monk2-local.names</a><br />
+<a href="monk2-local.test">monk2-local.test</a><br />
+<a href="monk2.names">monk2.names</a><br />
+<a href="monk2.test">monk2.test</a><br />
+<a href="monk3.all">monk3.all</a><br />
+<a href="monk3.data">monk3.data</a><br />
+<a href="monk3-full.all">monk3-full.all</a><br />
+<a href="monk3-full.data">monk3-full.data</a><br />
+<a href="monk3-full.names">monk3-full.names</a><br />
+<a href="monk3-full.test">monk3-full.test</a><br />
+<a href="monk3-local.data">monk3-local.data</a><br />
+<a href="monk3-local.names">monk3-local.names</a><br />
+<a href="monk3-local.test">monk3-local.test</a><br />
+<a href="monk3.names">monk3.names</a><br />
+<a href="monk3-org.all">monk3-org.all</a><br />
+<a href="monk3-org.data">monk3-org.data</a><br />
+<a href="monk3-org.names">monk3-org.names</a><br />
+<a href="monk3-org.test">monk3-org.test</a><br />
+<a href="monk3.test">monk3.test</a><br />
+<a href="mushroom.all">mushroom.all</a><br />
+<a href="mushroom.data">mushroom.data</a><br />
+<a href="mushroomLoss.all">mushroomLoss.all</a><br />
+<a href="mushroomLoss.data">mushroomLoss.data</a><br />
+<a href="mushroomLoss.names">mushroomLoss.names</a><br />
+<a href="mushroom.names">mushroom.names</a><br />
+<a href="mushroom.test">mushroom.test</a><br />
+<a href="musk2.names">musk2.names</a><br />
+<a href="mux6.data">mux6.data</a><br />
+<a href="mux6.names">mux6.names</a><br />
+<a href="mux6.test">mux6.test</a><br />
+<a href="nettalk.all">nettalk.all</a><br />
+<a href="nettalk.data">nettalk.data</a><br />
+<a href="nettalk.names">nettalk.names</a><br />
+<a href="nettalk.test">nettalk.test</a><br />
+<a href="new-thyroid.data">new-thyroid.data</a><br />
+<a href="new-thyroid.names">new-thyroid.names</a><br />
+<a href="parity5+5.all">parity5+5.all</a><br />
+<a href="parity5+5.data">parity5+5.data</a><br />
+<a href="parity5+5.names">parity5+5.names</a><br />
+<a href="parity5+5.test">parity5+5.test</a><br />
+<a href="parity5.names">parity5.names</a><br />
+<a href="parity5.test">parity5.test</a><br />
+<a href="pima.all">pima.all</a><br />
+<a href="pima.data">pima.data</a><br />
+<a href="pima.names">pima.names</a><br />
+<a href="pima.test">pima.test</a><br />
+<a href="post-operative.all">post-operative.all</a><br />
+<a href="post-operative.data">post-operative.data</a><br />
+<a href="post-operative.names">post-operative.names</a><br />
+<a href="post-operative.test">post-operative.test</a><br />
+<a href="primary-org.all">primary-org.all</a><br />
+<a href="primary-org.data">primary-org.data</a><br />
+<a href="primary-org.names">primary-org.names</a><br />
+<a href="primary-org.test">primary-org.test</a><br />
+<a href="primary-tumor.all">primary-tumor.all</a><br />
+<a href="primary-tumor.data">primary-tumor.data</a><br />
+<a href="primary-tumor.names">primary-tumor.names</a><br />
+<a href="primary-tumor.test">primary-tumor.test</a><br />
+<a href="rand20.all">rand20.all</a><br />
+<a href="rand20cont.all">rand20cont.all</a><br />
+<a href="rand20cont.data">rand20cont.data</a><br />
+<a href="rand20cont.names">rand20cont.names</a><br />
+<a href="rand20cont.test">rand20cont.test</a><br />
+<a href="rand20.data">rand20.data</a><br />
+<a href="rand20.names">rand20.names</a><br />
+<a href="rand20.test">rand20.test</a><br />
+<a href="sameLabel.all">sameLabel.all</a><br />
+<a href="sameLabel.data">sameLabel.data</a><br />
+<a href="sameLabel.names">sameLabel.names</a><br />
+<a href="sameLabel.test">sameLabel.test</a><br />
+<a href="satimage.all">satimage.all</a><br />
+<a href="satimage.data">satimage.data</a><br />
+<a href="satimage.names">satimage.names</a><br />
+<a href="satimage.test">satimage.test</a><br />
+<a href="segment.all">segment.all</a><br />
+<a href="segment.data">segment.data</a><br />
+<a href="segment.names">segment.names</a><br />
+<a href="segment.test">segment.test</a><br />
+<a href="shuttle.all">shuttle.all</a><br />
+<a href="shuttle.data">shuttle.data</a><br />
+<a href="shuttle.doc">shuttle.doc</a><br />
+<a href="shuttle-landing-control.data">shuttle-landing-control.data</a><br />
+<a href="shuttle-landing-control-full.data">shuttle-landing-control-full.data</a><br />
+<a href="shuttle-landing-control-full.names">shuttle-landing-control-full.names</a><br />
+<a href="shuttle-landing-control.names">shuttle-landing-control.names</a><br />
+<a href="shuttle.names">shuttle.names</a><br />
+<a href="shuttle-small.all">shuttle-small.all</a><br />
+<a href="shuttle-small.data">shuttle-small.data</a><br />
+<a href="shuttle-small.names">shuttle-small.names</a><br />
+<a href="shuttle-small.test">shuttle-small.test</a><br />
+<a href="shuttle.test">shuttle.test</a><br />
+<a href="sick-euthyroid.all">sick-euthyroid.all</a><br />
+<a href="sick-euthyroid.data">sick-euthyroid.data</a><br />
+<a href="sick-euthyroid.names">sick-euthyroid.names</a><br />
+<a href="sick-euthyroid.test">sick-euthyroid.test</a><br />
+<a href="sleep.all">sleep.all</a><br />
+<a href="sleep.data">sleep.data</a><br />
+<a href="sleep.names">sleep.names</a><br />
+<a href="sleep.test">sleep.test</a><br />
+<a href="solar.all">solar.all</a><br />
+<a href="solar.data">solar.data</a><br />
+<a href="solar.names">solar.names</a><br />
+<a href="solar.test">solar.test</a><br />
+<a href="sonar.all">sonar.all</a><br />
+<a href="sonar.data">sonar.data</a><br />
+<a href="sonar.names">sonar.names</a><br />
+<a href="sonar.test">sonar.test</a><br />
+<a href="soybean-large.all">soybean-large.all</a><br />
+<a href="soybean-large.data">soybean-large.data</a><br />
+<a href="soybean-large.names">soybean-large.names</a><br />
+<a href="soybean-large.test">soybean-large.test</a><br />
+<a href="soybean-small.all">soybean-small.all</a><br />
+<a href="soybean-small.data">soybean-small.data</a><br />
+<a href="soybean-small.names">soybean-small.names</a><br />
+<a href="soybean-small.test">soybean-small.test</a><br />
+<a href="splice1.all">splice1.all</a><br />
+<a href="splice1.data">splice1.data</a><br />
+<a href="splice1.names">splice1.names</a><br />
+<a href="splice1.test">splice1.test</a><br />
+<a href="splice.all">splice.all</a><br />
+<a href="splice.data">splice.data</a><br />
+<a href="splice.names">splice.names</a><br />
+<a href="splice.test">splice.test</a><br />
+<a href="threeOf9.all">threeOf9.all</a><br />
+<a href="threeOf9.data">threeOf9.data</a><br />
+<a href="threeOf9.names">threeOf9.names</a><br />
+<a href="threeOf9.test">threeOf9.test</a><br />
+<a href="tic-tac-toe.all">tic-tac-toe.all</a><br />
+<a href="tic-tac-toe-buggy.data">tic-tac-toe-buggy.data</a><br />
+<a href="tic-tac-toe-buggy.test">tic-tac-toe-buggy.test</a><br />
+<a href="tic-tac-toe.data">tic-tac-toe.data</a><br />
+<a href="tic-tac-toe.names">tic-tac-toe.names</a><br />
+<a href="tic-tac-toe.test">tic-tac-toe.test</a><br />
+<a href="tokyo1.all">tokyo1.all</a><br />
+<a href="tokyo1.data">tokyo1.data</a><br />
+<a href="tokyo1.names">tokyo1.names</a><br />
+<a href="tokyo1.test">tokyo1.test</a><br />
+<a href="tutorial.data">tutorial.data</a><br />
+<a href="tutorial.names">tutorial.names</a><br />
+<a href="tutorial.test">tutorial.test</a><br />
+<a href="unknown.data">unknown.data</a><br />
+<a href="unknown.names">unknown.names</a><br />
+<a href="unknown.test">unknown.test</a><br />
+<a href="vehicle.all">vehicle.all</a><br />
+<a href="vehicle.data">vehicle.data</a><br />
+<a href="vehicle.names">vehicle.names</a><br />
+<a href="vehicle.test">vehicle.test</a><br />
+<a href="vote1.all">vote1.all</a><br />
+<a href="vote1.data">vote1.data</a><br />
+<a href="vote1-irvine.all">vote1-irvine.all</a><br />
+<a href="vote1-irvine.data">vote1-irvine.data</a><br />
+<a href="vote1-irvine.names">vote1-irvine.names</a><br />
+<a href="vote1-irvine.test">vote1-irvine.test</a><br />
+<a href="vote1.names">vote1.names</a><br />
+<a href="vote1.test">vote1.test</a><br />
+<a href="vote.all">vote.all</a><br />
+<a href="vote.data">vote.data</a><br />
+<a href="vote-irvine.all">vote-irvine.all</a><br />
+<a href="vote-irvine.data">vote-irvine.data</a><br />
+<a href="vote-irvine.names">vote-irvine.names</a><br />
+<a href="vote-irvine.test">vote-irvine.test</a><br />
+<a href="vote.names">vote.names</a><br />
+<a href="vote.test">vote.test</a><br />
+<a href="waveform-21.all">waveform-21.all</a><br />
+<a href="waveform-21.data">waveform-21.data</a><br />
+<a href="waveform-21.names">waveform-21.names</a><br />
+<a href="waveform-21.test">waveform-21.test</a><br />
+<a href="waveform-40.all">waveform-40.all</a><br />
+<a href="waveform-40.data">waveform-40.data</a><br />
+<a href="waveform-40.names">waveform-40.names</a><br />
+<a href="waveform-40.test">waveform-40.test</a><br />
+<a href="wine.all">wine.all</a><br />
+<a href="wine.data">wine.data</a><br />
+<a href="wine.names">wine.names</a><br />
+<a href="wine.test">wine.test</a><br />
+<a href="xd6.data">xd6.data</a><br />
+<a href="xd6.names">xd6.names</a><br />
+<a href="xd6.test">xd6.test</a><br />
+<a href="zoo.all">zoo.all</a><br />
+<a href="zoo.data">zoo.data</a><br />
+<a href="zoo.names">zoo.names</a><br />
+<a href="zoo.small.names">zoo.small.names</a><br />
+<a href="zoo.test">zoo.test</a>
+</p>
+
+<!-- Content ends here -->
+
+</div>
+</div>
+</td></tr>
+
+
+<!-- Begin trademark footer -->
+<tr>
+<td colspan="2" valign="bottom" align="center">
+<div id="footer-full2">
+	<a href="/company_info/privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/company_info/terms.html">Terms of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/subscribe/">Subscribe</a>&nbsp;&nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/site_contents.html">Site Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&#149;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/company_info/contact_us.html">Contact Us</a>
+</div>
+<div id="footer-close2">&copy; 2009 - 2017 Silicon Graphics International Corp. All Rights Reserved.<br /><br /><a href="https://www.twitter.com/sgi_corp" target="_blank"><img src="/images/main_template/sm_twitter.png" style="border:0;" /></a>&nbsp;<a href="https://www.facebook.com/sgiglobal" target="_blank"><img src="/images/main_template/sm_facebook.png" style="border:0;" /></a>&nbsp;<a href="https://plus.google.com/+silicongraphics" target="_blank"><img src="/images/main_template/sm_googleplus.png" style="border:0;" /></a>&nbsp;<a href="http://www.youtube.com/sgicorp" target="_blank"><img src="/images/main_template/sm_youtube.png" style="border:0;" /></a>&nbsp;<a href="http://www.linkedin.com/company/sgi" target="_blank"><img src="/images/main_template/sm_linkedin.png" style="border:0;" /></a>&nbsp;<a href="http://blog.sgi.com/"><img src="/images/main_template/sm_blog.png" style="border:0;" /></a></div>
+</td>
+</tr>
+</table>
+<!-- End trademark footer -->
+</div>
+</div>
+</body>
+
+
+</HTML>
+

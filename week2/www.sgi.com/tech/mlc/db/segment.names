@@ -1,0 +1,141 @@
+| .names file created by George John October 1994
+|1. TITLE: 
+|	Image Segmentation data
+|
+|2. USE IN STATLOG
+|	2.1 Testing Mode:	
+|		10 Fold Cross-Validation
+|
+|	2.2 Special Preprocessing
+|		No
+|
+|	2.3 Test Results
+|				Success Rate	TIME
+|		Algorithm	Train	Test	Train	Test
+|		--------------------------------------------
+|		 Alloc80 	96.75	97.000	1248	279
+|		 Ac2 		100	96.900	3198	84
+|		 Dipol92 	?	96.900
+|		 BayTree 	?	96.700
+|		 NewId 		100	96.600	64	69
+|		 C4.5 		98.72	96.000	142	93
+|		 Cart 		99.51	96.000	139	4
+|		 Cn2 		99.67	95.700	114	3
+|		 IndCart 	98.81	95.500	248	234
+|		 LVQ 		?	95.400
+|		 Smart 		96.13	94.800	16362	1
+|		 BackProp 	?	94.600
+|		 Cal5 		95.82	93.800	259	?
+|		 Kohonen 	?	93.300
+|		 Radial 	?	93.100
+|		 KNN 		100	92.300	5	28
+|		 LogDisc 	90.25	89.100	302	8
+|		 Castle 	98.92	88.800	377	31
+|		 Discrim 	88.75	88.400	74	7
+|		 QuaDisc 	84.53	84.300	50	16
+|		 Bayes 		73.97	73.500	92	3
+|		 Itrule 	?	54.500
+|		 Default 	?	10.000
+|		 Cascade 	?	0.00
+|
+|
+|3. SOURCE and PASTE USAGE
+|	3.1	Source Information
+|   		-- Creators: Vision Group, University of Massachusetts
+|   		-- Donor: Vision Group (Carla Brodley, brodley@cs.umass.edu)
+|   		-- Date: November, 1990
+| 
+|	3.2 Past Usage: 
+|		None yet published
+|
+|4. DATASET DESCRIPTION:
+|
+|   The instances were drawn randomly from a database of 7 outdoor 
+|   images.  The images were handsegmented to create a classification
+|   for every pixel.  
+|
+|   Each instance is a 3x3 region.
+|
+|	4.1. Number of Instances:  2310
+|
+|	4.2. Number of Attributes: 19 continuous attributes
+|
+|	4.3 Number of Classes: 7
+|   		Classes: 
+|			1 = brickface	330 examples (14.29%) 
+|	    		2 = sky		330 examples (14.29%) 
+|	    		3 = foliage	330 examples (14.29%) 
+|	    		4 = cement	330 examples (14.29%) 
+|	    		5 = window	330 examples (14.29%) 
+|	    		6 = path	330 examples (14.29%) 
+|	    		7 = grass	330 examples (14.29%)
+|
+|	4.4. Attribute Information:
+|
+|    		1.  region-centroid-col:  the column of the center pixel of the region.
+|    		2.  region-centroid-row:  the row of the center pixel of the region.
+|    		3.  region-pixel-count:  the number of pixels in a region = 9.
+|    		4.  short-line-density-5:  the results of a line extractoin algorithm
+|		 that counts how many lines of length 5 (any orientation) with
+|         	 low contrast, less than or equal to 5, go through the region.
+|    		5.  short-line-density-2:  same as short-line-density-5 but counts 
+|		 lines of high contrast, greater than 5.
+|    		6.  vedge-mean:  measure the contrast of horizontally
+|   		 adjacent pixels in the region.  There are 6, the mean and 
+|         	 standard deviation are given.  This attribute is used as
+|        	 a vertical edge detector.
+|    		7.  vegde-sd:  (see 6)
+|    		8.  hedge-mean:  measures the contrast of vertically adjacent
+|          	 pixels. Used for horizontal line detection. 
+|    		9.  hedge-sd: (see 8).
+|    		10. intensity-mean:  the average over the region of (R + G + B)/3
+|    		11. rawred-mean: the average over the region of the R value.
+|    		12. rawblue-mean: the average over the region of the B value.
+|    		13. rawgreen-mean: the average over the region of the G value.
+|    		14. exred-mean: measure the excess red:  (2R - (G + B))
+|    		15. exblue-mean: measure the excess blue:  (2B - (G + R))
+|    		16. exgreen-mean: measure the excess green:  (2G - (R + B))
+|    		17. value-mean:  3-d nonlinear transformation
+|         	    of RGB. (Algorithm can be found in Foley and VanDam, Fundamentals
+|         	    of Interactive Computer Graphics)
+|    		18. saturation-mean:  (see 17)
+|    		19. hue-mean:  (see 17)
+|
+|
+|		Missing Attribute Values: None
+|
+|
+|NOTE
+|        EIGHT ATTRIBUTES ARE LINEAR COMBINATIONS (OR ARE CONSTANT), AND ARE
+|        BETTER REMOVED FOR THE PURPOSES OF LINEAR, QUADRATIC OR SIMILAR ALGORITHMS.
+|                     (NAMELY attributes X3, X10-X16).
+|    
+| 
+|
+|CONTACTS
+|	statlog-adm@ncc.up.pt
+|	bob@stams.strathclyde.ac.uk
+|	
+|
+|================================================================================
+    
+1,2,3,4,5,6,7.
+region-centroid-col: continuous.
+region-centroid-row: continuous.
+region-pixel-count: continuous.
+short-line-density-5: continuous.
+short-line-density-2: continuous.
+vedge-mean: continuous.
+vegde-sd: continuous.
+hedge-mean: continuous.
+hedge-sd: continuous.
+intensity-mean: continuous.
+rawred-mean: continuous.
+rawblue-mean: continuous.
+rawgreen-mean: continuous.
+exred-mean: continuous.
+exblue-mean: continuous.
+exgreen-mean: continuous.
+value-mean: continuous.
+saturation-mean: continuous.
+hue-mean: continuous.

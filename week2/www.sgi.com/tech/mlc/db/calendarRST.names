@@ -1,0 +1,41 @@
+| rst from Dayne Freitag
+| **Note**: From what I can see, there is concept drift
+|   and the test set is from a different population [Ronny Kohavi]
+| Rich and Dayne verified that this is the case.
+
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.
+
+
+Feature00:   continuous.
+Feature01:   continuous.
+Feature02:   continuous.
+Feature03:   continuous.
+Feature04:   continuous.
+Feature05:   continuous.
+Feature06:   continuous.
+Feature07:   continuous.
+Feature08:   continuous.
+Feature09:   continuous.
+Feature10:   continuous.
+Feature11:   continuous.
+Feature12:   continuous.
+Feature13:   continuous.
+Feature14:   continuous.
+Feature15:   continuous.
+Feature16:   continuous.
+Feature17:   continuous.
+Feature18:   continuous.
+Feature19:   continuous.
+Feature20:   0,1,2,3.
+Feature21:   continuous.
+Feature22:   0,1,2.
+Feature23:   continuous.
+Feature24:   0,1.
+Feature25:   0,1.
+Feature26:   0,1,2.
+Feature27:   0,1,2.
+Feature28:   continuous.
+Feature29:   continuous.
+Feature30:   continuous.
+Feature31:   0,1,2.
+

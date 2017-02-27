@@ -1,0 +1,27 @@
+| Random data (attributes and label).
+| By Ronny Kohavi using randGen.c
+| Declared continuous to check discretization algorithms
+
+0, 1
+
+A00: continuous.
+A01: continuous.
+A02: continuous.
+A03: continuous.
+A04: continuous.
+A05: continuous.
+A06: continuous.
+A07: continuous.
+A08: continuous.
+A09: continuous.
+A10: continuous.
+A11: continuous.
+A12: continuous.
+A13: continuous.
+A14: continuous.
+A15: continuous.
+A16: continuous.
+A17: continuous.
+A18: continuous.
+A19: continuous.
+

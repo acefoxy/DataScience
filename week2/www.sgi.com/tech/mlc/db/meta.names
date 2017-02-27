@@ -1,0 +1,30 @@
+| Date: Thu, 19 May 1994 15:33:15 +0100
+| From: Joao Gama <jgama@ncc.up.pt>
+| To: ronnyk@cs.stanford.edu
+| Subject: meta.data
+
+Good, Bad.
+
+N: continuous.		|Number of examples
+T: continuous.		|Number of examples on Test Set
+p:continuous.		|Nr. Atributes
+k:continuous.		|Nr. Classes
+Bin:continuous.		|Bin Atributtes
+Cost:continuous.	| Cost (yes/no)
+SDratio:continuous.	
+correl:continuous.
+cancor1:continuous.
+cancor2:continuous.
+fract1:continuous.
+fract2:continuous.
+skewness:continuous.
+kurtosis:continuous.
+Hc:continuous.
+Hx:continuous.
+MCx:continuous.
+EnAtr:continuous.
+NSRatio:continuous.
+DataSet
+Algorithm
+Estimate for Class
+

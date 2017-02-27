@@ -1,0 +1,92 @@
+
+1. TITLE: 
+	SHUTTLE Dataset (StatLog Version)
+
+2. USE IN STATLOG
+
+	2.1- Testing Mode		
+		Train and Test
+
+	2.2- Special Preprocessing	
+		Validation set:
+		The examples in the original dataset were in time order,
+		and this time order could presumably be relevant in classification.
+   		However, this was not deemed relevant for StatLog purposes,
+		so the order of the examples in the original dataset was randomised,
+ 		and a portion of the original dataset removed for validation purposes.
+
+	2.3- Test Results
+
+			Success Rate	TIME
+	Algorithm	Train	Test	Train	Test
+	--------------------------------------------
+	 NewId 		99.99	99.99	6180	?
+	 BayTree 	?	99.98
+	 Cn2 		99.97	99.97	11160	?
+	 Cal5 		?	99.97	552	18
+	 Cart 		80.96	99.92	382	102
+	 IndCart 	99.96	99.91	1152	16
+	 C4.5 		99.90	99.90	11131	11
+	 Ac2 		100.0	99.68	4493	3397
+	 Itrule 	?	99.59
+	 BackProp 	?	99.57
+	 KNN 		99.61	99.56	65270	21698
+	 LVQ 		?	99.56
+	 Dipol92 	?	99.52
+	 Smart 		99.39	99.41	110010	93
+	 Alloc80 	99.05	99.17	55215	18333
+	 Radial 	?	98.60
+	 Castle 	96.34	96.20	819	263
+	 LogDisc 	96.06	96.17	6946	106
+	 Bayes 		95.42	95.50	1030	22
+	 Discrim 	95.02	95.17	508	102
+	 QuaDisc 	93.65	93.28	709	177
+	 Default 	?	78.60
+	 Cascade 	?	0.000
+	 Kohonen 	?	0.000
+
+
+3. SOURCES and PAST USAGE
+	Acknowledgment:
+		Thanks to Jason Catlett of Basser Department of Computer Science, 
+		University of Sydney, N.S.W., Australia for providing the shuttle
+		 dataset.  
+		Thanks also to NASA for allowing us to use the shuttle datasets.
+ 
+
+4. DATASET DESCRIPTION
+	NUMBER OF EXAMPLES
+		training set     43500
+		test set         14500
+
+	NUMBER of CLASSES
+		7
+
+		Class	Description	Train		Test
+		------------------------------------------------------	
+        	1       Rad Flow	34108(78.41%)	11478 (79.16%)
+        	2       Fpv Close	37   (0.09%)	13    (0.09%)
+        	3       Fpv Open	132  (0.30%)	39    (0.27%)
+        	4       High		6748 (15.51%)	2155  (14.86%)
+        	5       Bypass		2458 (5.65%)	809   (5.58%)
+        	6       Bpv Close	6    (0.01%)	4     (0.03%)
+        	7       Bpv Open	11   (0.03%)	2     (0.01%)
+
+	Approximately 80% of the data belongs to class 1. Therefore the default 
+	accuracy is about 80%. The aim here is to obtain an accuracy of 
+	99 - 99.9%.        
+
+	NUMBER OF ATTRIBUTES
+		9
+
+	The shuttle dataset contains 9 attributes all of which are numerical.
+	The first one being time. 
+	        
+
+CONTACTS
+	statlog-adm@ncc.up.pt
+	bob@stams.strathclyde.ac.uk
+
+================================================================================
+
+

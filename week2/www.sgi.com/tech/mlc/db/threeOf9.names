@@ -1,0 +1,24 @@
+| 3 consecutive bits of 9 features are true.
+| Date: Mon, 19 Dec 94 15:58:45 -0500
+| From: hunter@work.nlm.nih.gov (Larry Hunter)
+| To: ronnyk@cs.stanford.edu
+| 
+| Ronny,
+| 
+| I'd be curious to see how OODG does.   Here's the complete dataset.  I've
+| been using 6 way cross validation on this dataset, so each learner sees
+| about 485 training examples.
+
+
+TRUE, FALSE
+
+F1 : 0,1.
+F2 : 0,1.
+F3 : 0,1.
+F4 : 0,1.
+F5 : 0,1.
+F6 : 0,1.
+F7 : 0,1.
+F8 : 0,1.
+F9 : 0,1.
+

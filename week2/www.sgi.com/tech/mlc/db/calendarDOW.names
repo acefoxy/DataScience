@@ -1,0 +1,43 @@
+| From Dayne Freitag.  Calendar Apprentice.
+| The data file is dow.data with dow.test and the test file
+| is dow-val.data with dow-val.test (as suggested by Danye)
+| **Note**: From what I can see, there is concept drift
+|   and the test set is from a different population [Ronny Kohavi]
+| Rich and Dayne verified that this is the case.
+|
+0, 1, 2, 3, 4, 5.
+
+
+Feature00:   continuous.
+Feature01:   continuous.
+Feature02:   0,1,2,3,4,5,6,7,8,9.
+Feature03:   0,1,2,3,4,5,6,7.
+Feature04:   0,1,2,3,4,5,6,7,8,9,10,11,12.
+Feature05:   0,1,2,3,4,5,6,7.
+Feature06:   0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15.
+Feature07:   0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17.
+Feature08:   0,1,2,3,4,5,6,7,8.
+Feature09:   0,1,2,3,4,5.
+Feature10:   0,1,2,3,4,5.
+Feature11:   0,1,2,3,4,5.
+Feature12:   continuous.
+Feature13:   continuous.
+Feature14:   0,1,2,3,4,5,6.
+Feature15:   0,1,2,3,4,5,6.
+Feature16:   0,1,2,3,4,5,6.
+Feature17:   0,1,2,3,4,5,6.
+Feature18:   0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50.
+Feature19:   0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89.
+Feature20:   0,1,2,3.
+Feature21:   0,1,2,3,4,5,6,7,8,9,10,11,12,13.
+Feature22:   0,1,2.
+Feature23:   0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20.
+Feature24:   0,1.
+Feature25:   0,1.
+Feature26:   0,1,2.
+Feature27:   0,1,2.
+Feature28:   0,1,2,3,4,5,6,7,8.
+Feature29:   0,1,2,3,4,5,6,7,8.
+Feature30:   0,1,2,3,4,5,6,7,8,9,10,11,12,13,14.
+Feature31:   0,1,2.
+

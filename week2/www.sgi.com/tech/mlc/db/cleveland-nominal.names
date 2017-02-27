@@ -1,0 +1,18 @@
+| same as cleveland dataset but with all continuous attributes stripped out
+
+0, 1, 2, 3, 4.		| classes
+
+| Note that according to the .names file:
+|      Experiments with the Cleveland database have concentrated on simply
+|      attempting to distinguish presence (values 1,2,3,4) from absence (value
+|      0).  
+
+| Note that there is a single missing value in 2 instances.
+
+sex:		0, 1.
+cp:		1, 2, 3, 4.
+fbs:		0, 1.
+restecg:	0, 1, 2.
+exang:		0, 1.
+slope:		1, 2, 3.
+thal:		3, 6, 7.

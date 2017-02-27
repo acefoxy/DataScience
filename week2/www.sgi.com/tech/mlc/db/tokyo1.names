@@ -1,0 +1,54 @@
+| PCP work.
+| This is Performance co-pilot data for the Tokyo server
+| at SGI.
+| Ronny Kohavi ronnyk@sgi.com
+
+good, bad.
+
+cpu_avg_user : continuous.
+cpu_avg_sys : continuous.
+cpu_avg_busy : continuous.
+cpu_avg_wait : continuous.
+cpu_avg_idle : continuous.
+cpu_avg_waste : continuous.
+cpu_max_user : continuous.
+cpu_max_sys : continuous.
+cpu_max_busy : continuous.
+cpu_max_wait : continuous.
+cpu_max_idle : continuous.
+cpu_max_waste : continuous.
+cpu_frac_busy : continuous.
+io_iget : continuous.
+io_bread : continuous.
+io_bwrite : continuous.
+io_lread : continuous.
+io_lwrite : continuous.
+io_phread : continuous.
+io_phwrite : continuous.
+io_wcancel : continuous.
+io_namei : continuous.
+io_dirblk : continuous.
+disk_avg_active : continuous.
+disk_max_active : continuous.
+disk_frac_active : continuous.
+disk_avg_read : continuous.
+disk_avg_write : continuous.
+disk_avg_total : continuous.
+disk_max_read : continuous.
+disk_max_write : continuous.
+disk_max_total : continuous.
+disk_frac_busy : continuous.
+net_avg_read : continuous.
+net_avg_write : continuous.
+net_avg_total : continuous.
+net_max_read : continuous.
+net_max_write : continuous.
+net_max_total : continuous.
+net_frac_busy : continuous.
+mem_swap : continuous.
+mem_fault : continuous.
+mem_tlbflush : continuous.
+syscall_total : continuous.
+|syscall_exec : continuous.
+|proc_nproc : continuous.
+
